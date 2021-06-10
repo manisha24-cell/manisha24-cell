@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     function solution(n){
+         let bin=Math.abs(n).toString(2);   
+         alert(`The binary form is:${bin}`);                           //convert number to binary
+         if(bin.length<3 ){
+            alert("No binary gaps found");
+            
+         }     
+         else{                       
+        
+         let substr = bin.substring(0, bin.lastIndexOf('1'));      //returns the substring between 0 to 
+                                                                   //lastindex
+         let split=substr.split('1');          
+    
+         return split.sort().reverse()[0].length;
+         }
+                                                    //return sorted array and reverse it and return length
+                                                        //of 0th position of reverse array
+ }
+    alert(solution(9));
+    alert(solution(5));
+        </script>
+       
+
+    
+</body>
+</html>
